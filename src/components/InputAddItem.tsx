@@ -27,25 +27,32 @@ const StyledInputContainer = styled.form`
   }
 `;
 
+interface Task {
+  id: number;
+  text: string;
+}
 interface IAddItem{
-  setTaskList: React.Dispatch<React.SetStateAction<object[]>>;
-  taskList: Array<object>;
+  setTaskList: React.Dispatch<React.SetStateAction<Task[]>>;
+  taskList: Array<Task>;
 }
 
 export default function InputAddItem({setTaskList,taskList}:IAddItem) {
 
-  function formHandler(e: React.FormEvent){
+  function formHandler(e: React.FormEvent) {
     e.preventDefault();
-    const inputElement = e.currentTarget.querySelector('input') as HTMLInputElement;
+    const formElement = e.currentTarget as HTMLFormElement;
+    const inputElement = formElement.querySelector('input') as HTMLInputElement;
     const newTask = { id: taskList.length + 1, text: inputElement.value };
-    console.log(newTask)
+    console.log(newTask);
     setTaskList((prevTaskList) => [...prevTaskList, newTask]);
+    formElement.reset();
   }
+  
 
   return (
     <StyledWrapper>
       <StyledInputContainer onSubmit={formHandler}>
-        <input type="text" />
+        <input type="text"/>
         <Button type="add" />
       </StyledInputContainer>
       <Lines type="large" />

@@ -14,17 +14,20 @@ const StyledApp = styled.main`
   margin-top: 2%;
 `;
 
-
+interface Task {
+  id: number;
+  text: string;
+}
 
 function App() {
-  const [taskList,setTaskList] = useState<Array<object>>([]);
+  const [taskList,setTaskList] = useState<Array<Task>>([]);
 
   return (
     <StyledApp>
       <Title />
       <WriteNote/>
       <InputAddItem setTaskList={setTaskList} taskList={taskList}/>
-      <TaskMain setTaskList={setTaskList} taskList={taskList} />
+      <TaskMain taskList={taskList} />
     </StyledApp>
   );
 }

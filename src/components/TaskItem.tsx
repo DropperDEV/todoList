@@ -16,14 +16,17 @@ const StyledTaskItem = styled.div`
     font-family: var(--regular);
     font-size: medium;
   }
-
-
 `;
-export default function TaskItem() {
+
+interface ITaskItem{
+  taskName: string;
+}
+
+export default function TaskItem({taskName}: ITaskItem) {
   return (
     <>
       <StyledTaskItem>
-        <p>This is my task</p>
+        <p>{taskName}</p>
         <Button type="delete"/>
       </StyledTaskItem>
     </>
