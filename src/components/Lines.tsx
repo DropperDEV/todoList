@@ -6,8 +6,13 @@ const StyledSmallLine = styled.hr`
 `;
 
 const StyledMediumLine = styled(StyledSmallLine)`
-  width: 100px;
+  width: 300px;
 `;
+
+const StyledLargeLine = styled(StyledSmallLine)`
+  width: 800px;
+`;
+
 interface LinesProps {
   type: string;
 }
@@ -17,6 +22,7 @@ function Lines({ type }: LinesProps) {
     <>
       {type === "small" && <StyledSmallLine />}
       {type === "medium" && <StyledMediumLine />}
+      {type === "large" && <StyledLargeLine />}
     </>
   );
 }
