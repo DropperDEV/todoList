@@ -3,6 +3,11 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Racing+Sans+One&display=swap');
+
+
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -96,6 +101,11 @@ table {
 
 
 body{
-  background-color: #1E1E1E;
+  background-color: #222222;
   color: #FFF;
+}
+
+:root{
+  --special: 'Racing Sans One', sans-serif;
+  --regular: 'Inter', sans-serif;
 }
