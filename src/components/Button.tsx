@@ -19,6 +19,9 @@ const StyledButtonDelete = styled.button`
 
 const StyledButtonAdd = styled(StyledButtonDelete)`
   background-color: #4f4f4f;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+  border-radius: 12px;
   font-family: var(--special);
 `;
 
@@ -34,7 +37,7 @@ export function Button({ type }: IButton) {
           <RiDeleteBin5Line size={23} />
         </StyledButtonDelete>
       )}
-      {type === "add" && <StyledButtonAdd>Add item</StyledButtonAdd>}
+      {type === "add" && <StyledButtonAdd>Adicionar Item</StyledButtonAdd>}
     </>
   );
 }
