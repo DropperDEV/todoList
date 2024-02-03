@@ -4,12 +4,14 @@ import { DeleteBinButton } from "./DeleteBinButton";
 const StyledTaskItem = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: #1E1E1E;
+  background-color: #222222;
   padding: 6px 6px 6px 6px;
   border-radius: 6px;
   justify-content: space-between;
   width: 40rem;
   position: relative;
+
+
   p {
     font-family: var(--regular);
     font-size: large;
