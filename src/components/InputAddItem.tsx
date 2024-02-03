@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Button } from "./Button"
 
 const StyledInputContainer = styled.div`
-    width: 40rem;
+    width: 42rem;
     padding: 10px 10px 10px 10px;
     background-color: #D9D9D9;
     border-radius: 12px;
@@ -12,6 +12,8 @@ const StyledInputContainer = styled.div`
         background-color: #D9D9D9;
         border: none;
         width: 31rem;
+        border-radius: 6px;
+        font-family: var(--regular);
     }
 `
 

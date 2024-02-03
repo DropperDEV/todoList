@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import TaskMain from "./components/taskMain";
 import InputAddItem from "./components/InputAddItem";
 import Title from "./components/Title";
+import TaskMain from "./components/TaskMain";
 
 const StyledApp = styled.main`
   display: flex;

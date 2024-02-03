@@ -22,6 +22,7 @@ const StyledButtonAdd = styled(StyledButtonDelete)`
   color: #fff;
   padding: 10px 10px 10px 10px;
   border-radius: 12px;
+  font-size: large;
   font-family: var(--special);
 `;
 
