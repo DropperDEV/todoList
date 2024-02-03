@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DeleteBinButton } from "./DeleteBinButton";
+import { Button } from "./Button";
 
 const StyledTaskItem = styled.div`
   display: flex;
@@ -24,7 +24,7 @@ export default function TaskItem() {
     <>
       <StyledTaskItem>
         <p>This is my task</p>
-        <DeleteBinButton />
+        <Button type="delete"/>
       </StyledTaskItem>
     </>
   );

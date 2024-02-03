@@ -1,12 +1,14 @@
 import styled from "styled-components"
-import TaskItem from "./components/TaskItem"
 import TaskMain from "./components/taskMain"
+import InputAddItem from "./components/InputAddItem"
 
 const StyledApp = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
+  margin-top: 2%;
 `
 
 function App() {
@@ -17,10 +19,7 @@ function App() {
         <div>
           <h1>TO-DO NOW</h1>
         </div>
-        <div>
-          <input type="text" />
-          <button>ADD TASK</button>
-        </div>
+        <InputAddItem/>
         <TaskMain/>
 
       </StyledApp>
