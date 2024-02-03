@@ -3,6 +3,7 @@ import InputAddItem from "./components/InputAddItem";
 import Title from "./components/Title";
 import TaskMain from "./components/TaskMain";
 import WriteNote from "./components/WriteNote";
+import { useState } from "react";
 
 const StyledApp = styled.main`
   display: flex;
@@ -13,13 +14,17 @@ const StyledApp = styled.main`
   margin-top: 2%;
 `;
 
+
+
 function App() {
+  const [taskList,setTaskList] = useState<Array<object>>([]);
+
   return (
     <StyledApp>
       <Title />
       <WriteNote/>
-      <InputAddItem />
-      <TaskMain />
+      <InputAddItem setTaskList={setTaskList} taskList={taskList}/>
+      <TaskMain setTaskList={setTaskList} taskList={taskList} />
     </StyledApp>
   );
 }
