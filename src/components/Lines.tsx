@@ -1,8 +1,24 @@
+import styled from "styled-components";
 
-interface LinesProps { type: string}
+const StyledSmallLine = styled.hr`
+  color: #fff;
+  width: 50px;
+`;
 
-function Lines({type}: LinesProps) {
-  return <div>Lines</div>;
+const StyledMediumLine = styled(StyledSmallLine)`
+  width: 100px;
+`;
+interface LinesProps {
+  type: string;
+}
+
+function Lines({ type }: LinesProps) {
+  return (
+    <>
+      {type === "small" && <StyledSmallLine />}
+      {type === "medium" && <StyledMediumLine />}
+    </>
+  );
 }
 
 export default Lines;
