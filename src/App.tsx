@@ -4,6 +4,7 @@ import Title from "./components/Title";
 import TaskMain from "./components/TaskMain";
 import WriteNote from "./components/WriteNote";
 import { useState } from "react";
+import { Task } from "./interface/Task";
 
 const StyledApp = styled.main`
   display: flex;
@@ -14,10 +15,7 @@ const StyledApp = styled.main`
   margin-top: 2%;
 `;
 
-interface Task {
-  id: number;
-  text: string;
-}
+
 
 function App() {
   const [taskList,setTaskList] = useState<Array<Task>>([]);
@@ -27,7 +25,7 @@ function App() {
       <Title />
       <WriteNote/>
       <InputAddItem setTaskList={setTaskList} taskList={taskList}/>
-      <TaskMain taskList={taskList} />
+      <TaskMain taskList={taskList} setTaskList={setTaskList} />
     </StyledApp>
   );
 }

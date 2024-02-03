@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Button } from "./Button";
 import Lines from "./Lines";
+import { Task } from "../interface/Task";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -27,10 +28,7 @@ const StyledInputContainer = styled.form`
   }
 `;
 
-interface Task {
-  id: number;
-  text: string;
-}
+
 interface IAddItem{
   setTaskList: React.Dispatch<React.SetStateAction<Task[]>>;
   taskList: Array<Task>;

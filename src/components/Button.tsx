@@ -28,13 +28,15 @@ const StyledButtonAdd = styled(StyledButtonDelete)`
 
 interface IButton {
   type: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export function Button({ type }: IButton) {
+
+export function Button({ type, onClick }: IButton) {
   return (
     <>
       {type === "delete" && (
-        <StyledButtonDelete>
+        <StyledButtonDelete onClick={onClick}>
           <RiDeleteBin5Line size={23} />
         </StyledButtonDelete>
       )}

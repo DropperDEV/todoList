@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Button } from "./Button";
+import { Task } from "../interface/Task";
 
 const StyledTaskItem = styled.div`
   display: flex;
@@ -11,23 +12,27 @@ const StyledTaskItem = styled.div`
   width: 40rem;
   position: relative;
 
-
   p {
     font-family: var(--regular);
     font-size: medium;
   }
 `;
 
-interface ITaskItem{
-  taskName: string;
+interface ITaskItem {
+  task: Task;
+  setTaskList: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
-export default function TaskItem({taskName}: ITaskItem) {
+export default function TaskItem({ task, setTaskList }: ITaskItem) {
+  function removeItem() {
+    setTaskList((items) => items.filter((item) => item.id !== task.id));
+  }
+
   return (
     <>
       <StyledTaskItem>
-        <p>{taskName}</p>
-        <Button type="delete"/>
+        <p>{task.text}</p>
+        <Button type="delete" onClick={removeItem} />
       </StyledTaskItem>
     </>
   );

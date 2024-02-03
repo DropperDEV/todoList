@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import TaskItem from "./TaskItem";
+import { Task } from "../interface/Task";
 
 const StyledTaskMain = styled.div`
   display: flex;
@@ -9,20 +10,18 @@ const StyledTaskMain = styled.div`
   gap: 1.5rem;
 `;
 
-interface Task {
-  id: number;
-  text: string;
-}
 
 interface ITaskMain {
   taskList: Array<Task>;
+  setTaskList: React.Dispatch<React.SetStateAction<Task[]>>;
+
 }
 
-export default function TaskMain({ taskList }: ITaskMain) {
+export default function TaskMain({ taskList, setTaskList }: ITaskMain) {
   return (
     <StyledTaskMain>
       {taskList.map((task) => (
-        <TaskItem taskName={task.text} key={task.id} />
+        <TaskItem task={task} key={task.id} setTaskList={setTaskList} />
       ))}
     </StyledTaskMain>
   );
