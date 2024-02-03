@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import TaskItem from "./components/TaskItem"
+import TaskMain from "./components/taskMain"
 
 const StyledApp = styled.main`
   display: flex;
@@ -20,7 +21,7 @@ function App() {
           <input type="text" />
           <button>ADD TASK</button>
         </div>
-        <TaskItem/>
+        <TaskMain/>
 
       </StyledApp>
        
