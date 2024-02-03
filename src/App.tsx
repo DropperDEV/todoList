@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { DeleteBinButton } from "./components/DeleteBinButton"
 import TaskItem from "./components/TaskItem"
 
 const StyledApp = styled.main`
@@ -22,7 +21,7 @@ function App() {
           <button>ADD TASK</button>
         </div>
         <TaskItem/>
-        
+
       </StyledApp>
        
     

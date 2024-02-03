@@ -1,27 +1,26 @@
 import styled from "styled-components";
 import { RiDeleteBin5Line } from "react-icons/ri";
 
-interface IDeleteBinButton {
-}
-
 const StyledDeleteBinButton = styled.button`
   background-color: #999999;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-  padding-left: 0.18rem;
-  padding-right: 0.18rem;
+  padding: 3px 3px 3px 3px;
   border-radius: 6px;
   outline: none;
   border: 0 none;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  right: 0px;
+  top: 0px;
 `;
 
 export function DeleteBinButton() {
   return (
     <StyledDeleteBinButton>
-      <RiDeleteBin5Line />
+      <RiDeleteBin5Line size={23} />
     </StyledDeleteBinButton>
   );
 }
