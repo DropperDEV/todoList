@@ -40,11 +40,17 @@ export default function InputAddItem({setTaskList,taskList}:IAddItem) {
     e.preventDefault();
     const formElement = e.currentTarget as HTMLFormElement;
     const inputElement = formElement.querySelector('input') as HTMLInputElement;
-    const newTask = { id: taskList.length + 1, text: inputElement.value };
-    console.log(newTask);
-    setTaskList((prevTaskList) => [...prevTaskList, newTask]);
-    formElement.reset();
+    const inputValue = inputElement.value.trim(); 
+  
+    if (inputValue === "") {
+      alert("É necessário pelo menos uma palavra");
+    } else {
+      const newTask = { id: taskList.length + 1, text: inputValue };
+      setTaskList((prevTaskList) => [...prevTaskList, newTask]);
+      formElement.reset();
+    }
   }
+  
   
 
   return (
