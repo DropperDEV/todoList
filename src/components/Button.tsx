@@ -28,7 +28,7 @@ const StyledButtonAdd = styled(StyledButtonDelete)`
 
 interface IButton {
   type: string;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 
